@@ -1,0 +1,9 @@
+<article class="details">
+  <h2>Message Details</h2>
+  <p><b>User:</b> <%= message.user %></p>
+  <p><b>Message:</b> <%= message.text %></p>
+  <p>
+    <b>Submitted:</b> <%= formatTime(message.added)[0].toUpperCase() +
+    formatTime(message.added).slice(1) %>
+  </p>
+</article>

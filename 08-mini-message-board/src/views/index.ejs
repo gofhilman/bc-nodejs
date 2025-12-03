@@ -1,0 +1,15 @@
+<article>
+  <h2>Mini Message Board</h2>
+  <div>
+    <% messages.forEach((message) => { %>
+    <article class="message">
+      <p class="content"><strong><%= message.user %>:</strong> <%= message.text %></p>
+      <p>
+        <%= formatTime(message.added)[0].toUpperCase() +
+        formatTime(message.added).slice(1) %>
+      </p>
+      <a href=<%= "/message/" + message.id %> ><button>Details</button></a>
+    </article>
+    <% }); %>
+  </div>
+</article>

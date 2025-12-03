@@ -1,0 +1,25 @@
+<form method="post" action="/new">
+  <h2>Create a new message</h2>
+  <%- include("partials/errors.ejs") %>
+  <div>
+    <label for="author">Name</label>
+    <input
+      type="text"
+      placeholder="Your name"
+      id="author"
+      name="author"
+      required
+    />
+  </div>
+  <div>
+    <label for="message">Message</label>
+    <textarea
+      name="message"
+      id="message"
+      placeholder="Your message"
+      rows="10"
+      required
+    ></textarea>
+  </div>
+  <button>Submit</button>
+</form>
